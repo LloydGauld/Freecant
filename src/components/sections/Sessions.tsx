@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, Lock } from "lucide-react";
 import { Badge, Button, Section } from "@/components/ui";
 import { cn } from "@/lib/cn";
 
@@ -30,7 +30,7 @@ const SESSIONS: Session[] = [
       "Real-time match coaching",
       "Tailored to your rank and goals",
     ],
-    href: "https://metafy.gg/@freecant/sessions/1-1-live-hour-of-individual-coaching-8E3K6vfEzZf",
+    href: "https://buy.stripe.com/cNi00ld48dZA7qod5U57W01",
   },
   {
     title: "4-Session Programme",
@@ -43,7 +43,7 @@ const SESSIONS: Session[] = [
       "Replay feedback via Discord",
       "Priority calendar booking",
     ],
-    href: "https://metafy.gg/@freecant/sessions/structured-coaching-programme-4-sessions-ibSal2EwiLR",
+    href: "https://buy.stripe.com/3cI28te8cbRs264fe257W02",
     featured: true,
   },
   {
@@ -57,7 +57,7 @@ const SESSIONS: Session[] = [
       "A concrete plan to fix them",
       "Yours to rewatch anytime",
     ],
-    href: "https://metafy.gg/@freecant/sessions/replay-review-48-hour-turnaround-isqBFUWTX6e",
+    href: "https://buy.stripe.com/7sY14p6FK08K6mk3vk57W03",
   },
 ];
 
@@ -146,6 +146,11 @@ export default function Sessions() {
               >
                 Book
               </Button>
+
+              <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted">
+                <Lock className="h-3 w-3" />
+                Secure checkout via Stripe
+              </p>
             </div>
           </motion.div>
         ))}
