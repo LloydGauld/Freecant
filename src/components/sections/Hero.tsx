@@ -1,11 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
-import { Badge, Button, Section } from "@/components/ui";
+import { Badge, Button, LiteYouTube, Section } from "@/components/ui";
 
 const METAFY_URL = "https://metafy.gg/@freecant";
 const DISCORD_URL = "https://discord.gg/KrWuKuqcDt";
+const INTRO_VIDEO_ID = "nj2V42-Bexg";
 
 export default function Hero() {
   return (
@@ -62,21 +62,12 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* Space for a video embed or image */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.15 }}
-          className="flex aspect-video w-full items-center justify-center rounded-3xl border border-border bg-surface"
         >
-          <div className="flex flex-col items-center gap-3 text-muted">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border">
-              <Play className="h-5 w-5 translate-x-0.5 text-foreground" />
-            </span>
-            <span className="text-xs uppercase tracking-[0.15em]">
-              Video coming soon
-            </span>
-          </div>
+          <LiteYouTube videoId={INTRO_VIDEO_ID} title="freecant coaching intro" />
         </motion.div>
       </Section>
     </section>
