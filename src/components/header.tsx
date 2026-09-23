@@ -16,10 +16,6 @@ export default function Header() {
           <Zap className="h-5 w-5 text-accent" />
           <span>freecant</span>
         </div>
-        <nav className="text-sm text-muted">
-          {/* Placeholder nav — wire up real links later */}
-          <span>Coming soon</span>
-        </nav>
       </div>
     </motion.header>
   );

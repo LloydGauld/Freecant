@@ -7,10 +7,10 @@ import {
   YouTubeIcon,
 } from "@/components/icons/social-icons";
 
-// TODO: paste real handles/URLs — Discord is live, the rest are placeholders.
+// TODO: paste real TikTok handle — the rest are live.
 const SOCIAL_LINKS = [
-  { label: "X", href: "#", icon: XIcon },
-  { label: "YouTube", href: "#", icon: YouTubeIcon },
+  { label: "X", href: "https://x.com/Freecant", icon: XIcon },
+  { label: "YouTube", href: "https://www.youtube.com/@Freecant10", icon: YouTubeIcon },
   { label: "TikTok", href: "#", icon: TikTokIcon },
   { label: "Discord", href: "https://discord.gg/KrWuKuqcDt", icon: DiscordIcon },
 ];
