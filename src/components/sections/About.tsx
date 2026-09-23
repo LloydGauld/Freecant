@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { ListChecks, MessageSquare, Trophy, User } from "lucide-react";
+import { ListChecks, MessageSquare, Trophy } from "lucide-react";
 import { Badge, Section } from "@/components/ui";
 
 const VALUE_PROPS = [
@@ -36,21 +37,19 @@ export default function About() {
         ref={ref}
         className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16"
       >
-        {/* Photo placeholder */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.5, ease: "easeOut" }}
-          className="flex aspect-[4/5] w-full items-center justify-center rounded-3xl border border-border bg-surface"
+          className="relative aspect-[4/5] w-full overflow-hidden rounded-3xl border border-border bg-surface"
         >
-          <div className="flex flex-col items-center gap-3 text-muted">
-            <span className="flex h-14 w-14 items-center justify-center rounded-full border border-border">
-              <User className="h-6 w-6" />
-            </span>
-            <span className="text-xs uppercase tracking-[0.15em]">
-              Photo coming soon
-            </span>
-          </div>
+          <Image
+            src="/images/lloyd-about.jpg"
+            alt="freecant coaching at a live Rocket League event"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
+          />
         </motion.div>
 
         <motion.div
@@ -63,9 +62,16 @@ export default function About() {
             Coached by someone who&rsquo;s actually competed
           </h2>
           <p className="mt-6 text-muted">
-            [Bio placeholder — swap in your story: how you got into
-            competitive Rocket League, your coaching philosophy, and what
-            makes freecant&rsquo;s approach different.]
+            I&rsquo;m Lloyd — a former professional Rocket League player
+            (RLCS Season X, Rix.gg) and head coach of Roehampton University,
+            where we won UK and European titles.
+          </p>
+          <p className="mt-4 text-muted">
+            I don&rsquo;t just teach mechanics. I coach decision-making,
+            rotation, and the habits that&rsquo;ll actually rank you up — the
+            same way I&rsquo;d coach a competitive roster. I&rsquo;ve worked
+            with players from Bronze to RLCS, and my job is simple: find
+            what&rsquo;s holding you back and give you a plan to fix it.
           </p>
 
           <h3 className="mt-10 font-display text-sm font-semibold uppercase tracking-[0.15em] text-muted">
