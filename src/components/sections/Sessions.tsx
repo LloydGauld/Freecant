@@ -21,7 +21,7 @@ type Session = {
 const SESSIONS: Session[] = [
   {
     title: "1-on-1 Live Coaching",
-    price: "$20",
+    price: "$25",
     priceNote: "per hour",
     description: "Live, real-time coaching built around your rank and goals.",
     bullets: [
@@ -34,7 +34,7 @@ const SESSIONS: Session[] = [
   },
   {
     title: "4-Session Programme",
-    price: "$70",
+    price: "$90",
     priceNote: "4 sessions",
     description: "A structured coaching block built around your progress.",
     bullets: [
@@ -48,7 +48,7 @@ const SESSIONS: Session[] = [
   },
   {
     title: "VOD Review",
-    price: "$12.50",
+    price: "$15",
     priceNote: "per review",
     description: "Async replay analysis with a 48-hour turnaround.",
     bullets: [
@@ -73,8 +73,7 @@ export default function Sessions() {
           Pick the coaching that fits
         </h2>
         <p className="mt-4 text-muted">
-          One-off sessions, async reviews, or a full structured block — all
-          delivered by an ex-pro RLCS coach.
+          One-off sessions, async reviews, or a full structured block.
         </p>
       </div>
 

@@ -35,9 +35,9 @@ function CountUp({ isInView, target, decimals = 0, suffix = "", duration = 1.4 }
 }
 
 const STATS = [
-  { target: 30, decimals: 0, suffix: "+", label: "Clients coached" },
-  { target: 9.6, decimals: 1, suffix: " / 10", label: "Average rating" },
-  { target: 50, decimals: 0, suffix: "+", label: "Sessions delivered" },
+  { target: 50, decimals: 0, suffix: "+", label: "Clients coached" },
+  { target: 9.8, decimals: 1, suffix: " / 10", label: "Average rating" },
+  { target: 200, decimals: 0, suffix: "+", label: "Sessions delivered" },
 ] as const;
 
 export default function Stats() {

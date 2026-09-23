@@ -21,9 +21,9 @@ export default function Reviews() {
         <p className="mt-4 flex items-center justify-center gap-1.5 text-muted">
           <Star className="h-4 w-4 fill-accent text-accent" />
           <span>
-            <strong className="font-semibold text-foreground">9.6</strong>{" "}
+            <strong className="font-semibold text-foreground">9.8</strong>{" "}
             average across{" "}
-            <strong className="font-semibold text-foreground">30+</strong>{" "}
+            <strong className="font-semibold text-foreground">50+</strong>{" "}
             clients
           </span>
         </p>

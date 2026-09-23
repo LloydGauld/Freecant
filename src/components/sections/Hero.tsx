@@ -37,27 +37,36 @@ export default function Hero() {
             Grand Champ, I&rsquo;ve coached them all.
           </p>
 
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          <div className="mt-10 flex flex-wrap items-center gap-3">
             <Button
-              href={METAFY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              size="lg"
+              href="#sessions"
+              size="md"
               analyticsEvent="book_session_click"
               analyticsData={{ location: "hero" }}
             >
               Book a session
             </Button>
             <Button
+              href={METAFY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="ghost"
+              size="md"
+              analyticsEvent="metafy_profile_click"
+              analyticsData={{ location: "hero" }}
+            >
+              Metafy profile
+            </Button>
+            <Button
               href={DISCORD_URL}
               target="_blank"
               rel="noopener noreferrer"
               variant="ghost"
-              size="lg"
+              size="md"
               analyticsEvent="join_discord_click"
               analyticsData={{ location: "hero" }}
             >
-              Join the Discord
+              Join Discord
             </Button>
           </div>
         </motion.div>
