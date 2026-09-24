@@ -11,7 +11,7 @@ const VALUE_PROPS = [
     icon: MessageSquare,
     title: "Personalised feedback",
     description:
-      "Every session is built around your replays, your rank, and your goals — not a generic curriculum.",
+      "Every session is built around your replays, your rank, and your goals, not a generic curriculum.",
   },
   {
     icon: ListChecks,
@@ -62,13 +62,13 @@ export default function About() {
             Coached by someone who has actually competed
           </h2>
           <p className="mt-6 text-muted">
-            I&rsquo;m Lloyd — a former professional Rocket League player
+            I&rsquo;m Lloyd, a former professional Rocket League player
             (RLCS Season X, Rix.gg) and head coach of Roehampton University,
             where we won UK and European titles.
           </p>
           <p className="mt-4 text-muted">
             I don&rsquo;t just teach mechanics. I coach decision-making,
-            rotation, and the habits that&rsquo;ll actually rank you up — the
+            rotation, and the habits that&rsquo;ll actually rank you up, the
             same way I&rsquo;d coach a competitive roster. I&rsquo;ve worked
             with players from Bronze to RLCS, and my job is simple: find
             what&rsquo;s holding you back and give you a plan to fix it.

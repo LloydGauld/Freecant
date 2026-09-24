@@ -18,7 +18,7 @@ export const reviews: Review[] = [
     name: "donaldson",
     rank: "Platinum I → Diamond I",
     quote:
-      "I can't recommend Freecant enough. Their coaching completely changed the way I approach Rocket League. Instead of just telling me what I was doing wrong, they broke everything down in a way that was easy to understand and immediately applicable in-game.",
+      "I can't recommend Freecant enough. His coaching completely changed the way I approach Rocket League. Instead of just telling me what I was doing wrong, they broke everything down in a way that was easy to understand and immediately applicable in-game.",
     rating: 5,
   },
   {
