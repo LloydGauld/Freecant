@@ -4,8 +4,7 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Hash } from "lucide-react";
 import { Button, Section } from "@/components/ui";
-
-const DISCORD_URL = "https://discord.gg/KrWuKuqcDt";
+import { DISCORD_URL } from "@/data/site";
 
 export default function DiscordCTA() {
   const ref = useRef<HTMLDivElement>(null);

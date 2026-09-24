@@ -28,6 +28,13 @@ body {
   h4 {
     @apply font-display tracking-tight;
   }
+
+  /* Chrome/Safari draw their own disclosure triangle on <summary> in
+     addition to list-style; Firefox respects list-style alone. Our FAQ
+     accordion supplies its own chevron icon instead. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
 }
 
 @layer utilities {

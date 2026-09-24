@@ -5,6 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import { Badge, Button, Section } from "@/components/ui";
 import { cn } from "@/lib/cn";
+import { STRIPE_URLS } from "@/data/site";
 
 type Session = {
   title: string;
@@ -33,7 +34,7 @@ const SESSIONS: Session[] = [
       "Real-time match coaching",
       "Tailored to your rank and goals",
     ],
-    href: "https://buy.stripe.com/cNi00ld48dZA7qod5U57W01",
+    href: STRIPE_URLS.liveCoaching,
     buttonLabel: "Buy a session",
   },
   {
@@ -48,7 +49,7 @@ const SESSIONS: Session[] = [
       "Replay feedback via Discord",
       "Priority calendar booking",
     ],
-    href: "https://buy.stripe.com/3cI28te8cbRs264fe257W02",
+    href: STRIPE_URLS.programme,
     buttonLabel: "Get the programme",
     featured: true,
   },
@@ -63,7 +64,7 @@ const SESSIONS: Session[] = [
       "A concrete plan to fix them",
       "Yours to rewatch anytime",
     ],
-    href: "https://buy.stripe.com/7sY14p6FK08K6mk3vk57W03",
+    href: STRIPE_URLS.vodReview,
     buttonLabel: "Order a VOD review",
   },
 ];

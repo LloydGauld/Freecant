@@ -6,13 +6,14 @@ import {
   XIcon,
   YouTubeIcon,
 } from "@/components/icons/social-icons";
+import { DISCORD_URL } from "@/data/site";
 
 // TODO: paste real TikTok handle — the rest are live.
 const SOCIAL_LINKS = [
   { label: "X", href: "https://x.com/Freecant", icon: XIcon },
   { label: "YouTube", href: "https://www.youtube.com/@Freecant10", icon: YouTubeIcon },
   { label: "TikTok", href: "#", icon: TikTokIcon },
-  { label: "Discord", href: "https://discord.gg/KrWuKuqcDt", icon: DiscordIcon },
+  { label: "Discord", href: DISCORD_URL, icon: DiscordIcon },
 ];
 
 export default function Footer() {
@@ -44,8 +45,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-border pt-6 text-xs text-muted sm:flex-row">
+        <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted sm:flex-row">
           <span>&copy; {new Date().getFullYear()} freecant. All rights reserved.</span>
+          <Link
+            href="/policies"
+            className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+          >
+            Refunds and rescheduling
+          </Link>
           <span>Rocket League coaching, done right.</span>
         </div>
       </div>

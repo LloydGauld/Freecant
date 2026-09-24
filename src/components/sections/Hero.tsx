@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Button, LiteYouTube, Section } from "@/components/ui";
+import { DISCORD_URL } from "@/data/site";
 
-const DISCORD_URL = "https://discord.gg/KrWuKuqcDt";
 const INTRO_VIDEO_ID = "nj2V42-Bexg";
 
 export default function Hero() {
