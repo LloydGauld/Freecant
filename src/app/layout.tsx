@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     template: "%s · freecant",
   },
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/site.webmanifest",
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
