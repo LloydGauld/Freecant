@@ -59,7 +59,7 @@ export default function About() {
         >
           <Badge>About</Badge>
           <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">
-            Coached by someone who&rsquo;s actually competed
+            Coached by someone who has actually competed
           </h2>
           <p className="mt-6 text-muted">
             I&rsquo;m Lloyd — a former professional Rocket League player

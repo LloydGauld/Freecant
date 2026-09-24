@@ -13,7 +13,7 @@ type Session = {
   description: string;
   bullets: string[];
   href: string;
-  /** Middle tier: stronger visual weight + "Most popular" badge. */
+  /** Middle tier: stronger visual weight + "Best value" badge. */
   featured?: boolean;
 };
 
@@ -110,7 +110,7 @@ export default function Sessions() {
                   filled
                   className="absolute -top-3 left-1/2 -translate-x-1/2"
                 >
-                  Most popular
+                  Best value
                 </Badge>
               )}
 
