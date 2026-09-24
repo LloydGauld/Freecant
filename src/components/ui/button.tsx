@@ -36,9 +36,10 @@ const base =
   "inline-flex items-center justify-center gap-2 rounded-pill font-display font-semibold tracking-tight transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-accent-foreground hover:bg-accent/90",
+  primary:
+    "bg-accent text-accent-foreground hover:bg-accent-light active:bg-accent-dark",
   ghost:
-    "border border-border text-foreground hover:border-accent hover:text-accent",
+    "border border-accent/20 text-foreground hover:border-accent hover:text-accent",
 };
 
 const sizes: Record<Size, string> = {

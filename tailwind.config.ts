@@ -10,13 +10,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        background: "#0A0A0B",
+        foreground: "#F5F5F7",
         muted: "var(--muted)",
         border: "var(--border)",
         surface: "var(--surface)",
+        card: "#171C28",
+        "card-dark": "#0B0D12",
         accent: {
-          DEFAULT: "var(--accent)",
+          lightest: "#8ADCFF",
+          light: "#5AA0FF",
+          DEFAULT: "#3D8BFF",
+          dark: "#2340E6",
           foreground: "var(--accent-foreground)",
         },
       },

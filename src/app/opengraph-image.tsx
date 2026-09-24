@@ -29,7 +29,7 @@ export default function OpengraphImage() {
               width: 14,
               height: 14,
               borderRadius: 4,
-              background: "#ff5722",
+              background: "#3D8BFF",
             }}
           />
           <span style={{ fontSize: 28, fontWeight: 700, letterSpacing: -0.5 }}>
