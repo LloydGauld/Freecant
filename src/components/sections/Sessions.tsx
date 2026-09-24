@@ -10,9 +10,12 @@ type Session = {
   title: string;
   price: string;
   priceNote: string;
+  /** Small callout under the price, e.g. a savings note. */
+  priceCallout?: string;
   description: string;
   bullets: string[];
   href: string;
+  buttonLabel: string;
   /** Middle tier: stronger visual weight + "Best value" badge. */
   featured?: boolean;
 };
@@ -31,11 +34,13 @@ const SESSIONS: Session[] = [
       "Tailored to your rank and goals",
     ],
     href: "https://buy.stripe.com/cNi00ld48dZA7qod5U57W01",
+    buttonLabel: "Buy a session",
   },
   {
     title: "4-Session Programme",
     price: "$90",
     priceNote: "4 sessions",
+    priceCallout: "Save $10 vs single sessions",
     description: "A structured coaching block built around your progress.",
     bullets: [
       "Four full 1-on-1 sessions",
@@ -44,6 +49,7 @@ const SESSIONS: Session[] = [
       "Priority calendar booking",
     ],
     href: "https://buy.stripe.com/3cI28te8cbRs264fe257W02",
+    buttonLabel: "Get the programme",
     featured: true,
   },
   {
@@ -58,6 +64,7 @@ const SESSIONS: Session[] = [
       "Yours to rewatch anytime",
     ],
     href: "https://buy.stripe.com/7sY14p6FK08K6mk3vk57W03",
+    buttonLabel: "Order a VOD review",
   },
 ];
 
@@ -68,8 +75,7 @@ export default function Sessions() {
   return (
     <Section id="sessions" className="border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
-        <Badge>Sessions</Badge>
-        <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">
+        <h2 className="text-4xl font-semibold sm:text-5xl">
           Pick the coaching that fits
         </h2>
         <p className="mt-4 text-muted">
@@ -125,6 +131,10 @@ export default function Sessions() {
                 <span className="text-sm text-muted">{session.priceNote}</span>
               </div>
 
+              {session.priceCallout && (
+                <p className="mt-1 text-xs text-accent">{session.priceCallout}</p>
+              )}
+
               <p className="mt-4 text-sm text-muted">{session.description}</p>
 
               <ul className="mt-6 flex-1 space-y-3">
@@ -143,17 +153,18 @@ export default function Sessions() {
                 variant={session.featured ? "primary" : "ghost"}
                 className="mt-8 w-full"
               >
-                Book
+                {session.buttonLabel}
               </Button>
-
-              <p className="mt-3 flex items-center justify-center gap-1.5 text-xs text-muted">
-                <Lock className="h-3 w-3" />
-                Secure checkout via Stripe
-              </p>
             </div>
           </motion.div>
         ))}
       </div>
+
+      <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-muted">
+        <Lock className="h-3 w-3 shrink-0" />
+        Secure checkout via Stripe. After you pay, message me on Discord and
+        we&rsquo;ll book your session time together.
+      </p>
     </Section>
   );
 }

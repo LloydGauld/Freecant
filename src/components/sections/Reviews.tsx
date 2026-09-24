@@ -1,21 +1,25 @@
 "use client";
 
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { Star } from "lucide-react";
-import { Badge, Section } from "@/components/ui";
+import { Button, Section } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { reviews } from "@/data/reviews";
+
+const METAFY_URL = "https://metafy.gg/@freecant";
+const MOBILE_LIMIT = 3;
+const DESKTOP_LIMIT = 6;
 
 export default function Reviews() {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const [showAll, setShowAll] = useState(false);
 
   return (
     <Section id="reviews" className="border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
-        <Badge>Reviews</Badge>
-        <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">
+        <h2 className="text-4xl font-semibold sm:text-5xl">
           What players are saying
         </h2>
         <p className="mt-4 flex items-center justify-center gap-1.5 text-muted">
@@ -41,7 +45,15 @@ export default function Reviews() {
             initial={{ opacity: 0, y: 16 }}
             animate={isInView ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
-            className="mb-6 break-inside-avoid rounded-3xl border border-border bg-surface p-8"
+            className={cn(
+              "mb-6 break-inside-avoid rounded-3xl border border-border bg-surface p-8",
+              !showAll &&
+                (index >= DESKTOP_LIMIT
+                  ? "hidden"
+                  : index >= MOBILE_LIMIT
+                    ? "hidden sm:block"
+                    : undefined),
+            )}
           >
             <div className="flex gap-1">
               {Array.from({ length: 5 }).map((_, i) => (
@@ -71,6 +83,21 @@ export default function Reviews() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div className="mt-10 flex flex-col items-center gap-5">
+        <Button variant="ghost" size="md" onClick={() => setShowAll((prev) => !prev)}>
+          {showAll ? "Show fewer" : "Show all reviews"}
+        </Button>
+
+        <a
+          href={METAFY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm text-muted underline-offset-4 hover:text-accent hover:underline"
+        >
+          Verified reviews on Metafy
+        </a>
       </div>
     </Section>
   );

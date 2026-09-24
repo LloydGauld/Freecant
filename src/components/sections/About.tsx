@@ -4,7 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { ListChecks, MessageSquare, Trophy } from "lucide-react";
-import { Badge, Section } from "@/components/ui";
+import { Section } from "@/components/ui";
 
 const VALUE_PROPS = [
   {
@@ -57,8 +57,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : undefined}
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.1 }}
         >
-          <Badge>About</Badge>
-          <h2 className="mt-4 text-4xl font-semibold sm:text-5xl">
+          <h2 className="text-4xl font-semibold sm:text-5xl">
             Coached by someone who has actually competed
           </h2>
           <p className="mt-6 text-muted">

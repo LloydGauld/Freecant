@@ -19,7 +19,7 @@ const sora = Sora({
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://freecant.com";
 const SITE_TITLE = "freecant — Rocket League Coaching";
 const SITE_DESCRIPTION =
-  "1-on-1 Rocket League coaching from an ex-pro RLCS coach. Bronze to Grand Champ, book a live session or grab an async VOD review.";
+  "1-on-1 Rocket League coaching from a former RLCS pro. Bronze to SSL: book a live session, a 4-session programme or an async VOD review.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
