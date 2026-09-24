@@ -2,17 +2,15 @@ import Link from "next/link";
 import { Zap } from "lucide-react";
 import {
   DiscordIcon,
-  TikTokIcon,
   XIcon,
   YouTubeIcon,
 } from "@/components/icons/social-icons";
 import { DISCORD_URL } from "@/data/site";
 
-// TODO: paste real TikTok handle — the rest are live.
+// TODO: add TikTok back once there's a real handle to link to.
 const SOCIAL_LINKS = [
   { label: "X", href: "https://x.com/Freecant", icon: XIcon },
   { label: "YouTube", href: "https://www.youtube.com/@Freecant10", icon: YouTubeIcon },
-  { label: "TikTok", href: "#", icon: TikTokIcon },
   { label: "Discord", href: DISCORD_URL, icon: DiscordIcon },
 ];
 

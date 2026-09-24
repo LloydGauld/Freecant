@@ -10,7 +10,7 @@ export default function HowItWorks() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <Section id="how-it-works" className="border-t border-border">
+    <Section id="how-it-works" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold sm:text-5xl">
           How booking works

@@ -17,7 +17,7 @@ export default function Reviews() {
   const [showAll, setShowAll] = useState(false);
 
   return (
-    <Section id="reviews" className="border-t border-border">
+    <Section id="reviews" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold sm:text-5xl">
           What players are saying
@@ -86,7 +86,12 @@ export default function Reviews() {
       </div>
 
       <div className="mt-10 flex flex-col items-center gap-5">
-        <Button variant="ghost" size="md" onClick={() => setShowAll((prev) => !prev)}>
+        <Button
+          type="button"
+          variant="ghost"
+          size="md"
+          onClick={() => setShowAll((prev) => !prev)}
+        >
           {showAll ? "Show fewer" : "Show all reviews"}
         </Button>
 

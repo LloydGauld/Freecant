@@ -74,7 +74,7 @@ export default function Sessions() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <Section id="sessions" className="border-t border-border">
+    <Section id="sessions" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold sm:text-5xl">
           Pick the coaching that fits

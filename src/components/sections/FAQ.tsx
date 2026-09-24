@@ -11,7 +11,7 @@ export default function FAQ() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <Section id="faq" className="border-t border-border">
+    <Section id="faq" className="scroll-mt-20 border-t border-border">
       <div className="mx-auto max-w-2xl text-center">
         <h2 className="text-4xl font-semibold sm:text-5xl">
           Common questions
