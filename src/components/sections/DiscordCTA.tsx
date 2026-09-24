@@ -2,7 +2,6 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { Hash } from "lucide-react";
 import { Button, Section } from "@/components/ui";
 import { DISCORD_URL } from "@/data/site";
 
@@ -32,11 +31,7 @@ export default function DiscordCTA() {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-col items-center"
         >
-          <span className="flex h-12 w-12 items-center justify-center rounded-full border border-border text-accent">
-            <Hash className="h-5 w-5" />
-          </span>
-
-          <h2 className="mt-6 max-w-2xl text-balance text-4xl font-semibold sm:text-5xl">
+          <h2 className="max-w-2xl text-balance text-4xl font-semibold sm:text-5xl">
             Join the Freecant Discord
           </h2>
 

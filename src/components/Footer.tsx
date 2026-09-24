@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Zap } from "lucide-react";
 import {
   DiscordIcon,
   XIcon,
@@ -19,12 +18,10 @@ export default function Footer() {
     <footer className="border-t border-border">
       <div className="mx-auto max-w-content px-6 py-12">
         <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
-          <Link
-            href="/"
-            className="flex items-center gap-2 font-display font-semibold tracking-tight"
-          >
-            <Zap className="h-5 w-5 text-accent" />
-            <span>freecant</span>
+          <Link href="/" aria-label="freecant — back to top">
+            {/* eslint-disable-next-line @next/next/no-img-element -- static
+                vector logo, no benefit from next/image's raster optimizer */}
+            <img src="/brand/freecant-logo.svg" alt="freecant" className="h-9 w-auto" />
           </Link>
 
           <div className="flex items-center gap-4">

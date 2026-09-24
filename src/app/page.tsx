@@ -1,9 +1,9 @@
 import Hero from "@/components/sections/Hero";
 import Stats from "@/components/sections/Stats";
-import Reviews from "@/components/sections/Reviews";
+import About from "@/components/sections/About";
 import Sessions from "@/components/sections/Sessions";
 import HowItWorks from "@/components/sections/HowItWorks";
-import About from "@/components/sections/About";
+import Reviews from "@/components/sections/Reviews";
 import FAQ from "@/components/sections/FAQ";
 import DiscordCTA from "@/components/sections/DiscordCTA";
 import Footer from "@/components/Footer";
@@ -13,10 +13,10 @@ export default function Home() {
     <>
       <Hero />
       <Stats />
-      <Reviews />
+      <About />
       <Sessions />
       <HowItWorks />
-      <About />
+      <Reviews />
       <FAQ />
       <DiscordCTA />
       <Footer />

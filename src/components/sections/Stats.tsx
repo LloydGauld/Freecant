@@ -1,13 +1,43 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { animate, motion, useInView, useMotionValue } from "framer-motion";
 import { Section, Stat } from "@/components/ui";
 
+type CountUpProps = {
+  isInView: boolean;
+  target: number;
+  decimals?: number;
+  suffix?: string;
+  duration?: number;
+};
+
+function CountUp({ isInView, target, decimals = 0, suffix = "", duration = 1.4 }: CountUpProps) {
+  const motionValue = useMotionValue(0);
+  const [display, setDisplay] = useState((0).toFixed(decimals));
+
+  useEffect(() => {
+    if (!isInView) return;
+    const controls = animate(motionValue, target, {
+      duration,
+      ease: "easeOut",
+      onUpdate: (value) => setDisplay(value.toFixed(decimals)),
+    });
+    return () => controls.stop();
+  }, [isInView, target, decimals, duration, motionValue]);
+
+  return (
+    <span className="tabular-nums">
+      {display}
+      {suffix}
+    </span>
+  );
+}
+
 const STATS = [
-  { value: "50+", label: "Clients coached" },
-  { value: "9.8 / 10", label: "Review Rating" },
-  { value: "200+", label: "Sessions delivered" },
+  { target: 50, decimals: 0, suffix: "+", label: "Clients coached" },
+  { target: 9.8, decimals: 1, suffix: " / 10", label: "Review Rating" },
+  { target: 200, decimals: 0, suffix: "+", label: "Sessions delivered" },
 ] as const;
 
 export default function Stats() {
@@ -27,7 +57,18 @@ export default function Stats() {
             animate={isInView ? { opacity: 1, y: 0 } : undefined}
             transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.08 }}
           >
-            <Stat accent value={stat.value} label={stat.label} />
+            <Stat
+              accent
+              value={
+                <CountUp
+                  isInView={isInView}
+                  target={stat.target}
+                  decimals={stat.decimals}
+                  suffix={stat.suffix}
+                />
+              }
+              label={stat.label}
+            />
           </motion.div>
         ))}
 
