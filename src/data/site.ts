@@ -7,6 +7,9 @@
 /** Discord server invite — used for booking, support and the "join" CTAs. */
 export const DISCORD_URL = "https://discord.gg/KrWuKuqcDt";
 
+/** Stripe Payment Link behind the /tip redirect. */
+export const TIP_URL = "https://buy.stripe.com/7sY14pc047Bc2644zo57W04";
+
 /** Stripe Payment Link for each session product, keyed by session id. */
 export const STRIPE_URLS = {
   liveCoaching: "https://buy.stripe.com/cNi00ld48dZA7qod5U57W01",

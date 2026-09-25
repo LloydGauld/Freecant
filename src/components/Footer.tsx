@@ -42,12 +42,20 @@ export default function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-border pt-6 text-xs text-muted sm:flex-row">
           <span>&copy; {new Date().getFullYear()} freecant. All rights reserved.</span>
-          <Link
-            href="/policies"
-            className="underline-offset-4 transition-colors hover:text-accent hover:underline"
-          >
-            Refunds and rescheduling
-          </Link>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/policies"
+              className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+            >
+              Refunds and rescheduling
+            </Link>
+            <Link
+              href="/tip"
+              className="underline-offset-4 transition-colors hover:text-accent hover:underline"
+            >
+              Tip your coach
+            </Link>
+          </div>
           <span>Rocket League coaching, done right.</span>
         </div>
       </div>
