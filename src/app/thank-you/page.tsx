@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { CheckCircle2 } from "lucide-react";
 import { Button, Section } from "@/components/ui";
-
-const DISCORD_URL = "https://discord.gg/KrWuKuqcDt";
+import { DISCORD_URL } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Thank you",
@@ -50,6 +50,16 @@ export default function ThankYou() {
         >
           Join Discord
         </Button>
+
+        <p className="mt-6 text-sm text-muted">
+          Enjoyed the session?{" "}
+          <Link
+            href="/tip"
+            className="text-accent underline-offset-4 hover:underline"
+          >
+            Leave your coach a tip
+          </Link>
+        </p>
       </Section>
     </section>
   );

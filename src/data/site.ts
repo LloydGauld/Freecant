@@ -86,4 +86,9 @@ export const FAQ_ITEMS: FaqItem[] = [
     answer:
       "US dollars. If you pay with a card in another currency, it's converted automatically when you pay.",
   },
+  {
+    question: "Can I leave a tip?",
+    answer:
+      "Never expected, always appreciated. You can add one when you check out, or leave one any time at freecant.com/tip.",
+  },
 ];
