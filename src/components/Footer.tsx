@@ -1,15 +1,16 @@
 import Link from "next/link";
 import {
   DiscordIcon,
+  TikTokIcon,
   XIcon,
   YouTubeIcon,
 } from "@/components/icons/social-icons";
 import { DISCORD_URL } from "@/data/site";
 
-// TODO: add TikTok back once there's a real handle to link to.
 const SOCIAL_LINKS = [
   { label: "X", href: "https://x.com/Freecant", icon: XIcon },
   { label: "YouTube", href: "https://www.youtube.com/@Freecant10", icon: YouTubeIcon },
+  { label: "TikTok", href: "https://www.tiktok.com/@freecantrl", icon: TikTokIcon },
   { label: "Discord", href: DISCORD_URL, icon: DiscordIcon },
 ];
 
