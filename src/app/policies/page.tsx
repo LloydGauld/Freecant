@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 import { Section } from "@/components/ui";
-import { REFUND_POLICY } from "@/data/site";
+import { REFUND_POLICY_PARAGRAPHS } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Refunds and rescheduling",
@@ -24,9 +24,11 @@ export default function PoliciesPage() {
           Refunds and rescheduling
         </h1>
 
-        <p className="mt-6 text-lg leading-relaxed text-muted">
-          {REFUND_POLICY}
-        </p>
+        <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
+          {REFUND_POLICY_PARAGRAPHS.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
       </div>
     </Section>
   );

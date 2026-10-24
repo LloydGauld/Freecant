@@ -5,8 +5,10 @@ import {
   XIcon,
   YouTubeIcon,
 } from "@/components/icons/social-icons";
-import { DISCORD_URL } from "@/data/site";
+import { DISCORD_URL, METAFY_URL } from "@/data/site";
 
+// lucide-react and our hand-authored social-icons set have no Metafy mark,
+// so it's a text link (below) styled to match the icon buttons instead.
 const SOCIAL_LINKS = [
   { label: "X", href: "https://x.com/Freecant", icon: XIcon },
   { label: "YouTube", href: "https://www.youtube.com/@Freecant10", icon: YouTubeIcon },
@@ -38,6 +40,14 @@ export default function Footer() {
                 <social.icon className="h-4 w-4" />
               </a>
             ))}
+            <a
+              href={METAFY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-9 items-center rounded-full border border-border px-3.5 text-xs font-medium text-muted transition-colors hover:border-accent hover:text-accent"
+            >
+              Metafy
+            </a>
           </div>
         </div>
 
@@ -50,12 +60,14 @@ export default function Footer() {
             >
               Refunds and rescheduling
             </Link>
-            <Link
-              href="/tip"
+            <a
+              href={METAFY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="underline-offset-4 transition-colors hover:text-accent hover:underline"
             >
               Tip your coach
-            </Link>
+            </a>
           </div>
           <span>Rocket League coaching, done right.</span>
         </div>

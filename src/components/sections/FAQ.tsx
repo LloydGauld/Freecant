@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef } from "react";
+import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { Section } from "@/components/ui";
@@ -36,6 +37,17 @@ export default function FAQ() {
               </summary>
               <p className="mt-3 text-sm leading-relaxed text-muted">
                 {item.answer}
+                {item.link && (
+                  <>
+                    {" "}
+                    <Link
+                      href={item.link.href}
+                      className="text-accent underline-offset-4 hover:underline"
+                    >
+                      {item.link.label}
+                    </Link>
+                  </>
+                )}
               </p>
             </details>
           </motion.div>
