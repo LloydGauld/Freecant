@@ -54,7 +54,7 @@ const SESSIONS: Session[] = [
   },
   {
     title: "Replay Review",
-    price: "$12.50",
+    price: "$15",
     priceNote: "per review",
     description: "Async replay analysis with a 48-hour turnaround.",
     bullets: [
