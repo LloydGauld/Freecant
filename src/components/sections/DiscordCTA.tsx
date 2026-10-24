@@ -36,8 +36,8 @@ export default function DiscordCTA() {
           </h2>
 
           <p className="mt-4 max-w-xl text-muted">
-            Jump into the welcome channel, unlock rank-based roles, and browse
-            a wall of fame full of real client reviews.
+            Free guides, replay feedback, rank roles and a wall of fame full
+            of real client reviews.
           </p>
 
           <Button

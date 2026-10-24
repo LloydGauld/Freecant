@@ -6,8 +6,8 @@ import { Star } from "lucide-react";
 import { Button, Section } from "@/components/ui";
 import { cn } from "@/lib/cn";
 import { reviews } from "@/data/reviews";
+import { METAFY_REVIEWS_URL } from "@/data/site";
 
-const METAFY_URL = "https://metafy.gg/@freecant";
 const MOBILE_LIMIT = 3;
 const DESKTOP_LIMIT = 6;
 
@@ -96,7 +96,7 @@ export default function Reviews() {
         </Button>
 
         <a
-          href={METAFY_URL}
+          href={METAFY_REVIEWS_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm text-muted underline-offset-4 hover:text-accent hover:underline"

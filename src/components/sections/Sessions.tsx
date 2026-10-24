@@ -5,7 +5,7 @@ import { motion, useInView } from "framer-motion";
 import { Check, Lock } from "lucide-react";
 import { Badge, Button, Section } from "@/components/ui";
 import { cn } from "@/lib/cn";
-import { STRIPE_URLS } from "@/data/site";
+import { CONSULT_URL, METAFY_URLS } from "@/data/site";
 
 type Session = {
   title: string;
@@ -17,11 +17,10 @@ type Session = {
   bullets: string[];
   href: string;
   buttonLabel: string;
-  /** Middle tier: stronger visual weight + "Best value" badge. */
+  /** Strongest visual weight + "Best value" badge. */
   featured?: boolean;
 };
 
-// TODO: swap in the real listing once the Group Cohort product is live.
 const SESSIONS: Session[] = [
   {
     title: "1-on-1 Live Coaching",
@@ -34,8 +33,8 @@ const SESSIONS: Session[] = [
       "Real-time match coaching",
       "Tailored to your rank and goals",
     ],
-    href: STRIPE_URLS.liveCoaching,
-    buttonLabel: "Buy a session",
+    href: METAFY_URLS.liveCoaching,
+    buttonLabel: "Book a session",
   },
   {
     title: "4-Session Programme",
@@ -49,12 +48,12 @@ const SESSIONS: Session[] = [
       "Replay feedback via Discord",
       "Priority calendar booking",
     ],
-    href: STRIPE_URLS.programme,
+    href: METAFY_URLS.programme,
     buttonLabel: "Get the programme",
     featured: true,
   },
   {
-    title: "VOD Review",
+    title: "Replay Review",
     price: "$15",
     priceNote: "per review",
     description: "Async replay analysis with a 48-hour turnaround.",
@@ -64,8 +63,23 @@ const SESSIONS: Session[] = [
       "A concrete plan to fix them",
       "Yours to rewatch anytime",
     ],
-    href: STRIPE_URLS.vodReview,
-    buttonLabel: "Order a VOD review",
+    href: METAFY_URLS.replayReview,
+    buttonLabel: "Order a replay review",
+  },
+  {
+    title: "Team Coaching",
+    price: "$25",
+    priceNote: "per hour",
+    description:
+      "Coaching for your 2s or 3s team, built around how you play together.",
+    bullets: [
+      "Team replay review",
+      "Rotation and spacing as a unit",
+      "Clear, simple callouts",
+      "A gameplan for your next matches",
+    ],
+    href: METAFY_URLS.teamCoaching,
+    buttonLabel: "Book team coaching",
   },
 ];
 
@@ -80,13 +94,14 @@ export default function Sessions() {
           Pick the coaching that fits
         </h2>
         <p className="mt-4 text-muted">
-          One-off sessions, async reviews, or a full structured block.
+          Live sessions, replay reviews, team coaching or a full four-week
+          programme.
         </p>
       </div>
 
       <div
         ref={ref}
-        className="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-stretch"
+        className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4 lg:items-stretch"
       >
         {SESSIONS.map((session, index) => (
           <motion.div
@@ -163,9 +178,27 @@ export default function Sessions() {
 
       <p className="mt-10 flex items-center justify-center gap-1.5 text-center text-xs text-muted">
         <Lock className="h-3 w-3 shrink-0" />
-        Secure checkout via Stripe. After you pay, message me on Discord and
-        we&rsquo;ll book your session time together.
+        Booking and secure checkout on Metafy, with my live calendar so you
+        pick your own time.
       </p>
+
+      <div className="mt-6 flex flex-col items-center gap-3 text-center">
+        <p className="text-sm text-muted">
+          Not sure which to pick? Book a free 15-minute consult and
+          I&rsquo;ll point you to the right session.
+        </p>
+        <Button
+          href={CONSULT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          variant="ghost"
+          size="md"
+          analyticsEvent="consult_click"
+          analyticsData={{ location: "sessions" }}
+        >
+          Book a free consult
+        </Button>
+      </div>
     </Section>
   );
 }
